@@ -3,7 +3,6 @@
 
 **This is purpose for test only not real assigment** 
 
-# Final Assignment
 
 ### Front End Libraries Projects - Build a Random Quote Machine
 
