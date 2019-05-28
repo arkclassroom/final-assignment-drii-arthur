@@ -1,31 +1,62 @@
-# Final-Assigment---Draft
+# Arkademy Final Assignment
+
+# Overview
+
+Anda di minta membuat aplikasi web untuk mengelola inventory dengan wireframe seperti berikut :
+
+#### 1. Home
+
+![1. Home](https://paper-attachments.dropbox.com/s_40FC9DA56CF2503230614B785B4F9101DB7F5A94D0974445CC2B1BA585439B42_1559024577979_Listing.png)
 
 
-**This is purpose for test only not real assigment** 
+#### 2. Login
+
+![2. Login](https://paper-attachments.dropbox.com/s_40FC9DA56CF2503230614B785B4F9101DB7F5A94D0974445CC2B1BA585439B42_1559024626478_login.png)
 
 
-### Front End Libraries Projects - Build a Random Quote Machine
+#### 3. Manage
+![3. Manage](https://paper-attachments.dropbox.com/s_40FC9DA56CF2503230614B785B4F9101DB7F5A94D0974445CC2B1BA585439B42_1559024665811_Manage+1.png)
 
 
-- Objective: Build a  app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/qRZeGZ.
 
-- Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
+dan scema database seperti berikut :
 
-- You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+**1. Tabel Items**
 
-### User Stories
-- #1: I can see a wrapper element with a corresponding `id="quote-box"`
-- #2: Within #quote-box, I can see an element with a corresponding id="text".
-- #3: Within #quote-box, I can see an element with a corresponding id="author".
-- #4: Within #quote-box, I can see a clickable element with a corresponding id="new-quote".
-- #5: Within #quote-box, I can see a clickable element with a corresponding id="tweet-quote".
-- #6: On first load, my quote machine displays a random quote in the element with id="text".
-- #7: On first load, my quote machine displays the random quote's author in the element with id="author".
-- #8: When the #new-quote button is clicked, my quote machine should fetch a new quote and display it in the #text element.
-- #9: My quote machine should fetch the new quote's author when the #new-quote button is clicked and display it in the #author element.
-- #10: I can tweet the current quote by clicking on the #tweet-quote a element. This a element should include the "twitter.com/intent/tweet" path in it's href attribute to tweet the current quote.
-- User Story #11: The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
+| Field       | Type     |                              |
+| ----------- | -------- | ---------------------------- |
+| id          | INT      | auto increament, Primary Key |
+| productName | VARCHAR  |                              |
+| price       | INT      |                              |
+| category    | VARCHAR  |                              |
+| stock       | INT      |                              |
+| createdAt   | DATETIME | auto updated                 |
 
 
-Once you're done, submit the URL to your working project with all its tests passing.
-Remember to use the Read-Search-Ask method if you get stuck.
+**2. Tabel Users**
+
+| Field    | Type    |                              |
+| -------- | ------- | ---------------------------- |
+| id       | INT     | auto increament, Primary Key |
+| email    | VARCHAR |                              |
+| password | VARCHAR |                              |
+
+
+**Adapun fitur dari aplikasi ini adalah :**
+
+1. User non-login dapat mengakses halaman `home` dan `login`
+2. User non-login tidak boleh mengakses halaman `manage`
+3. User login dapat mengakses semua halaman dan melakukan penambahan item, perubahan item dan penghapusan item pada halaman `manage`
+4. Warna background pada item `stock`  di halaman `manage` akan otomatis berubah sesuai aturan berikut :
+        - Merah : Jika stok = 0 
+        - Kuning : Jika stok <=10
+        - Hijau : Jika stok >10
+
+
+
+# Soal
+1. Buat frontend dengan CSS framework pilihan anda sesuai dengan wireframe di atas didalam folder `/frontend`
+2. Buat REST API yang terhubung dengan database untuk login dan CRUD inventory di dalam folder `/backend` 
+3. Integrasi frontend dan backend untuk memenuhi fitur aplikasi yang sudah di jabarkan di atas
+
+
