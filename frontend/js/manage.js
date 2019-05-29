@@ -1,9 +1,12 @@
-const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)username\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+// const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)username\s*\=\s*([^;]*).*$)|^.*$/, "$1")
 
-if (!cookieValue) {
-    $(".container").html("")
-    window.location.href = "/signin"
-}
+// if (!cookieValue) {
+//     $(".container").html("")
+//     window.location.href = "/signin"
+// }
+// else {
+//     windows.location.href = "/manage"
+// }
 
 let url = "http://localhost:3000/item";
 
