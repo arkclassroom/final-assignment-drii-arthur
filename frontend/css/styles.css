@@ -1,0 +1,25 @@
+.header {
+    border-bottom:1px solid black;
+    background: rgb(73,9,121);
+    background: linear-gradient(90deg, rgba(73,9,121,1) 50%, rgba(0,241,255,1) 100%);
+}
+.nav-item{
+    color:#fff
+}
+.nav-item:hover{
+    text-decoration: none;
+    color:#fff;
+    font-weight: bold;
+}
+
+.form-tambah, .manageProduct,.signIn{
+    box-shadow: 2px 2px 5px rgb(143, 143, 143);
+}
+
+.card{
+    background-color:rgb(209, 211, 211);
+    width:30%;
+    height:auto;
+    display:inline-block;
+    margin:10px;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Final Assigntment Test</title>
+</head>
+
+<body>
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col-md-12 py-3">
+                <div class="text-center">
+                    <a href="/" class="nav-item mx-2">Home</a>
+                    <a href="/item" class="nav-item mx-2">Manage</a>
+                    <a href="/login" class="nav-item mx-2">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-3 mb-5">
+                <div class="form-tambah pt-4">
+                    <form>
+                        <input type="hidden" id="id">
+                        <div class="form-group px-3">
+                            <label for="name">Product Name</label>
+                            <input type="text" name="ProductName" class="form-control" id="ProductName" />
+                            <code id="errName"></code>
+                        </div>
+
+                        <div class="form-group px-3">
+                            <label for="price">Price</label>
+                            <input type="text" name="Price" class="form-control" id="Price" />
+                            <code id="errPrice"></code>
+                        </div>
+
+                        <div class="form-group px-3">
+                            <label for="">Category</label>
+                            <input type="text" name="category" class="form-control" id="category">
+                            <code id="errCat"></code>
+                        </div>
+
+                        <div class="form-group px-3">
+                            <label for="stock">Stock</label>
+                            <input type="text" name="stock" class="form-control" id="stock" />
+                            <code id="Stock"></code>
+                        </div>
+
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary tombol m-4" id="tambah"
+                                onclick="onFormSubmit();event.preventDefault()">
+                                Save
+                            </button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="col-md-9">
+                <div class="manageProduct py-4">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope=" col ml-3">ID</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Price</th>
+                                <th scope="col" id="stockCol">Stock</th>
+                                <th scope="col">Created At</th>
+                                <th scope="col" style="border-right:0"> </th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-row">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/manage.js">
+    </script>
+</body>
+
+</html>

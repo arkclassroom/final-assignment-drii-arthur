@@ -1,0 +1,28 @@
+{
+  "name": "final-assignment-drii-arthur",
+  "version": "1.0.0",
+  "description": "Final test Arkademy",
+  "main": "backend/server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "start": "nodemon backend/server.js localhost 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkclassroom/final-assignment-drii-arthur.git"
+  },
+  "author": "muhammad pandriadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arkclassroom/final-assignment-drii-arthur/issues"
+  },
+  "homepage": "https://github.com/arkclassroom/final-assignment-drii-arthur#readme"
+}
