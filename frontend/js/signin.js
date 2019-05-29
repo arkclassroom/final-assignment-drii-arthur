@@ -1,5 +1,11 @@
 let url = "http://localhost:3000/users/"
 
+const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)username\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+
+if (cookieValue) {
+    window.location.href = "/"
+}
+
 let btn = document.getElementById("login");
 if (btn) {
     btn.addEventListener('click', e => {
@@ -16,6 +22,7 @@ if (btn) {
                     err.innerHTML = "password salah";
                     return false;
                 } else {
+                    window.cookie = `username = ${data.email}`
                     window.location.href = "/"
                 }
             })

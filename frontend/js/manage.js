@@ -1,3 +1,10 @@
+const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)username\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+
+if (!cookieValue) {
+    $(".container").html("")
+    window.location.href = "/signin"
+}
+
 let url = "http://localhost:3000/item";
 
 selectedRow = null;
