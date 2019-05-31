@@ -1,10 +1,5 @@
 let url = "http://localhost:3000/users/"
 
-const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)username\s*\=\s*([^;]*).*$)|^.*$/, "$1")
-
-// if (cookieValue) {
-//     window.location.href = "/"
-// }
 
 let btn = document.getElementById("login");
 if (btn) {
@@ -13,8 +8,7 @@ if (btn) {
         console.log("aku di klik")
         let email = document.getElementById('email').value;
         let pw = document.getElementById('pw').value;
-
-        fetch(url + 'signin/' + email)
+        fetch(url + "signin/" + email)
             .then((res) => res.json())
             .then((data) => {
                 if (pw != data.password) {
@@ -22,8 +16,7 @@ if (btn) {
                     err.innerHTML = "password salah";
                     return false;
                 } else {
-                    // window.cookie = `username = ${data.email}`
-                    window.location.href = "/"
+                    window.location.href = "/manage"
                 }
             })
     })

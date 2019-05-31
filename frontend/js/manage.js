@@ -40,24 +40,25 @@ const viewData = () => {
             let createAt = row.insertCell(5);
             let action = row.insertCell(6);
 
-            // if (item.stock < 10) {
-            //     document.getElementsByClassName('table')[td].style.backgroundColor = "red"
-            // }
-            //  else if (item.stock >= 10) {
-            //     stock.setAttribute("style:background-color:green")
-            // }
-            // else {
-            //     stock.setAttribute("style:background-color:yellow")
-            // }
             id.innerHTML = item.id
             productName.innerHTML = item.productName;
             category.innerHTML = item.category;
             price.innerHTML = item.price;
             stock.innerHTML = item.stock;
-            createAt.innerHTML = item.createAt;
+            createAt.innerHTML = item.createdAt;
             action.innerHTML = `<a href="#" onclick="onEdit(this)"> <i  id="edit" class="fas fa-user-edit"></i></a> &nbsp;&nbsp;
 <a href="#" > <i id="hapus" class="fas fa-trash" style="color:red" onclick="remove(`+ item.id + `)"></i> </a> 
 `
+            if (item.stock <= 10) {
+                // document.getElementsByTagName("td")[4].style = "background:red";
+                stock.style = "background-color:red"
+            }
+            else if (item.stock > 11 && item.stock < 30) {
+                stock.style = "background-color:yellow"
+            }
+            else {
+                stock.style = "background-color:green"
+            }
 
         }))
 }
@@ -70,11 +71,17 @@ const myInput = () => {
     let price = document.getElementById("Price");
     let category = document.getElementById("category");
     let stock = document.getElementById("stock");
+    let dateObj = new Date();
+    let day = dateObj.getUTCDate();
+    let month = dateObj.getUTCMonth() + 1;
+    let year = dateObj.getUTCFullYear();
+    let newDate = day + "/" + month + "/" + year;
     let result = {
         "productName": Product.value,
         "price": price.value,
         "category": category.value,
-        "stock": stock.value
+        "stock": stock.value,
+        "createdAt": newDate
     }
     return result;
 }

@@ -61,9 +61,10 @@ app.put("/item/:id", (req, res, ) => {
       productName = ?,
       price = ?, 
       category = ?,
-      stock = ?
+      stock = ?,
+      createdAt = ?
       where id = ?`
-    const params = [req.body.productName, req.body.price, req.body.category, req.body.stocks, req.params.id]
+    const params = [req.body.productName, req.body.price, req.body.category, req.body.stock, req.body.createdAt, req.params.id]
 
     db.run(sql, params, (err, data) => {
         if (err) throw err;
@@ -85,7 +86,7 @@ app.delete("/item/:id", (req, res, ) => {
 })
 
 app.get("/users/signin/:email", (req, res) => {
-    const sql = "select * from users where email = ?"
+    const sql = "SELECT * FROM users WHERE email = ?"
     const param = req.params.email
 
     db.get(sql, param, (err, data) => {
